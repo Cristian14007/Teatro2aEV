@@ -1,8 +1,13 @@
 using BackEnd.Data;
 using BackEnd.Business;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 
+//var builder = WebApplication.CreateBuilder(args);
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -26,11 +31,12 @@ builder.Services.AddScoped<IngredienteService>(); */
 builder.Services.AddScoped<IObraService, ObraService>();
 builder.Services.AddScoped<IObraRepository, ObraEFRepository>();
 
+//var connectionString = builder.Configuration.GetConnectionString("ServerDB");
 var connectionString = builder.Configuration.GetConnectionString("ServerDB");
 
 builder.Services.AddDbContext<ObraContext>(options =>
     options.UseSqlServer(connectionString)
-    .LogTo(Console.WriteLine, LogLevel.Information));
+    .LogTo(Console.WriteLine,LogLevel.Information));
   
   
 
