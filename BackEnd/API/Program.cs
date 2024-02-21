@@ -1,10 +1,10 @@
-using BackEnd.Data;
-using BackEnd.Business;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using BackEnd.Business;
+using BackEnd.Data;
 
 
 //var builder = WebApplication.CreateBuilder(args);
