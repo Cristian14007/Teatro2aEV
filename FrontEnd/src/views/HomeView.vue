@@ -2,12 +2,12 @@
 import obras from "../App.vue"
 import Card from '../components/Card.vue'
 import ObrasDisplay from "../components/ObrasDisplay.vue"
+import AboutSlider from "../components/AboutSlider.vue"
 </script>
 
 <template>
     <br><br><br>
-    Vista Home
-
+    <AboutSlider></AboutSlider>
     <section class="menu" id="menu">
 
 <h1 class="heading"> Proximos <span>estrenos</span> </h1>
