@@ -32,9 +32,9 @@ namespace BackEnd.Data{
 
           
             modelBuilder.Entity<Asiento>()
-                .HasOne(s => s.Sesion)
+                .HasOne(a => a.Sesion)
                 .WithMany(s => s.Asientos)
-                .HasForeignKey(s => s.SesionId)
+                .HasForeignKey(a => a.SesionId)
                  .OnDelete(DeleteBehavior.NoAction);
         }
 
