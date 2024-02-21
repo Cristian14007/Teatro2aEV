@@ -87,6 +87,25 @@ namespace BackEnd.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.InsertData(
+                table: "Obras",
+                columns: new[] { "ObraId", "Descripcion", "Genero", "Imagen", "Titulo" },
+                values: new object[,]
+                {
+                    { 1, "Descripcion 1", "Drama", "ruta imagen 1", "Obra 1" },
+                    { 2, "Descripcion 2", "Comedia", "ruta imagen 2", "Obra 2" },
+                    { 3, "Descripcion 3", "Suspense", "ruta imagen 3", "Obra 3" },
+                    { 4, "Descripcion 4", "Suspense", "ruta imagen 4", "Obra 4" },
+                    { 5, "Descripcion 5", "Drama", "ruta imagen 5", "Obra 5" },
+                    { 6, "Descripcion 6", "Comedia", "ruta imagen 6", "Obra 6" },
+                    { 7, "Descripcion 7", "Comedia", "ruta imagen 7", "Obra 7" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Sesiones",
+                columns: new[] { "SesionId", "DiaSesion", "HoraSesion", "ObraId" },
+                values: new object[] { 1, new DateTime(2024, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 20, 30, 0, 0), 1 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Asientos_SesionId",
                 table: "Asientos",

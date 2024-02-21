@@ -78,6 +78,64 @@ namespace BackEnd.Data.Migrations
                     b.HasKey("ObraId");
 
                     b.ToTable("Obras");
+
+                    b.HasData(
+                        new
+                        {
+                            ObraId = 1,
+                            Descripcion = "Descripcion 1",
+                            Genero = "Drama",
+                            Imagen = "ruta imagen 1",
+                            Titulo = "Obra 1"
+                        },
+                        new
+                        {
+                            ObraId = 2,
+                            Descripcion = "Descripcion 2",
+                            Genero = "Comedia",
+                            Imagen = "ruta imagen 2",
+                            Titulo = "Obra 2"
+                        },
+                        new
+                        {
+                            ObraId = 3,
+                            Descripcion = "Descripcion 3",
+                            Genero = "Suspense",
+                            Imagen = "ruta imagen 3",
+                            Titulo = "Obra 3"
+                        },
+                        new
+                        {
+                            ObraId = 4,
+                            Descripcion = "Descripcion 4",
+                            Genero = "Suspense",
+                            Imagen = "ruta imagen 4",
+                            Titulo = "Obra 4"
+                        },
+                        new
+                        {
+                            ObraId = 5,
+                            Descripcion = "Descripcion 5",
+                            Genero = "Drama",
+                            Imagen = "ruta imagen 5",
+                            Titulo = "Obra 5"
+                        },
+                        new
+                        {
+                            ObraId = 6,
+                            Descripcion = "Descripcion 6",
+                            Genero = "Comedia",
+                            Imagen = "ruta imagen 6",
+                            Titulo = "Obra 6"
+                        },
+                        new
+                        {
+                            ObraId = 7,
+                            Descripcion = "Descripcion 7",
+                            Genero = "Comedia",
+                            Imagen = "ruta imagen 7",
+                            Titulo = "Obra 7"
+                        });
                 });
 
             modelBuilder.Entity("BackEnd.Models.Sesion", b =>
@@ -102,6 +160,15 @@ namespace BackEnd.Data.Migrations
                     b.HasIndex("ObraId");
 
                     b.ToTable("Sesiones");
+
+                    b.HasData(
+                        new
+                        {
+                            SesionId = 1,
+                            DiaSesion = new DateTime(2024, 3, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            HoraSesion = new TimeSpan(0, 20, 30, 0, 0),
+                            ObraId = 1
+                        });
                 });
 
             modelBuilder.Entity("BackEnd.Models.User", b =>
