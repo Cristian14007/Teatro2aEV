@@ -1,26 +1,25 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BackEnd.Models;
 public class Asiento
 {
 
-    public int AsientoId {get; set;}
-
-    public int SesionId {get; set;}
-
-    public int NumAsiento {get; set;}
-
+    [Key]
+    public int AsientoId { get; set; }
+    [Required]
+    public int NumAsiento { get; set; }
+    [Required]
     public bool Reservado {get; set;}
+    public int UserId { get; set; }
+    public User User { get; set; }
+    public int SesionId { get; set; }
+    public Sesion Sesion { get; set; }
 
     
     public Asiento (){
 
     }
 
-    public Asiento(int asientoId, int sesionId, int numasiento, bool reservado){
-
-        AsientoId = asientoId;
-        SesionId = sesionId;
-        NumAsiento = numasiento;
-        Reservado = reservado;
-    }
+    
 
 }

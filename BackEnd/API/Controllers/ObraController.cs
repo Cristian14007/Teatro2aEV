@@ -20,7 +20,7 @@ public ActionResult<List<Obra>> GetAll() =>
     _obraService.GetAll();
 
     [HttpGet]
-    [Route("Id")]
+    [Route("{id}")]
 public ActionResult<Obra> Get(int id)
 {
     var obra = _obraService.Get(id);

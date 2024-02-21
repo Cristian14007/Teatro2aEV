@@ -1,24 +1,22 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BackEnd.Models;
 public class User
 {
 
-    public int UserId {get; set;}
-    public string Nombre {get; set;}
-
-    public string Password {get; set;}
-
-    public int ReservaId {get; set;}
+    [Key]
+    public int UserId { get; set; }
+    [Required]
+    public string Username { get; set; }
+    [Required]
+    public string Password { get; set; }
+    
+    public List<Asiento> Asientos { get; set; }
 
     public User (){
 
     }
 
-    public User(int userId, string nombre, string password, int reservaId){
-
-        UserId = userId;
-        Nombre = nombre;
-        Password = password;
-        ReservaId = reservaId;
-    }
+    
 
 }
