@@ -15,7 +15,7 @@
     <p>{{ descripcion }}</p>
     
   </div>
-  <button>Comprar</button>
+  <button><RouterLink to="/horario">Comprar</RouterLink></button>
 </div>
 </template>
 

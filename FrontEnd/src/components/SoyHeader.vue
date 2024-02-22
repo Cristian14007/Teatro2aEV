@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import TheWelcome from '../components/TheWelcome.vue';
+
 </script>
 
 <template>
@@ -38,6 +38,7 @@ import TheWelcome from '../components/TheWelcome.vue';
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
 }
 
 .navbar-header{
